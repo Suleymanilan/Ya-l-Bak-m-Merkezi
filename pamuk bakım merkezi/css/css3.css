@@ -1,0 +1,45 @@
+ 
+        /* Hizmetler Sayfasına Özel Ek Stiller */
+        .services-hero {
+            background: linear-gradient(rgba(45, 90, 39, 0.85), rgba(45, 90, 39, 0.85)), url('img/hizmet-bg.jpg') center/cover;
+            padding: 100px 0 60px;
+            text-align: center;
+            color: white;
+        }
+
+        .service-detail-card {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 60px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .service-detail-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-detail-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-info { flex: 1; }
+        .service-image { flex: 1; height: 350px; border-radius: 20px; overflow: hidden; }
+        .service-image img { width: 100%; height: 100%; object-fit: cover; }
+
+        .service-info h3 { font-size: 2rem; color: #2d5a27; margin-bottom: 20px; }
+        .service-info p { font-size: 1.1rem; color: #555; margin-bottom: 20px; }
+        
+        .feature-list { list-style: none; }
+        .feature-list li { margin-bottom: 10px; color: #333; font-weight: 500; }
+        .feature-list li i { color: #2d5a27; margin-right: 10px; }
+
+        @media (max-width: 992px) {
+            .service-detail-card, .service-detail-card:nth-child(even) { flex-direction: column; text-align: center; }
+            .service-image { width: 100%; height: 250px; }
+        }
+    

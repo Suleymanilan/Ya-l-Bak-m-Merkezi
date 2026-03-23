@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pamuk Bakım Merkezi | Huzurun Adresi</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo margin-left:200px">Pamuk Yaşlı Bakım Merkezleri</div>
+        <ul class="nav-links">
+                  <li><a href="HomePage.html">Ana Sayfa</a></li>
+            <li><a href="Services.html">Hizmetler</a></li>
+            <li><a href="Our Team.html">Ekibimiz</a></li>
+            <li><a href="About.html">Hakkımızda</a></li>
+            <li><a href="Activity.html">Etkinliklerimiz</a></li>
+            <li><a href="Contact.html">İletişim</a></li>
+ <li class="big-icon">
+    <i class="fas fa-phone"></i> +90 569874123
+</li>
+
+        </ul>
+    </nav>
+
+    <header id="head" class="hero-header">
+        <h1>Pamuk Yaşlı Bakım merkezi</h1>
+        <p>Sevdiklerinizin ikinci baharını güven ve sevgi içinde geçirmesini sağlıyoruz.</p>
+        <div class="btn-group">
+            <a href="#" class="btn btn-primary">Hemen Kayıt Ol</a>
+            <button class="btn btn-secondary" onclick="yeniSoz()">Günün Mesajı</button>
+        </div>
+        <div id="quote-display">Huzur dolu bir mesaj için butona basınız...</div>
+    </header>
+
+<section class="slider-area">
+    <div class="slider-container" id="slider">
+        <div class="slide active">
+            <img src="img/a4.jpg" alt="Bahçemiz">
+            <div class="slider-caption">Huzurlu Bahçemiz</div>
+        </div>
+        <div class="slide">
+            <img src="img/a5.jpg" style="filter: sepia(0.3);" alt="Dinlenme Alanı">
+            <div class="slider-caption">Konforlu Dinlenme Alanları</div>
+        </div>
+        <div class="slide">
+            <img src="img/a3.webp" style="filter: brightness(0.8);" alt="Etkinlikler">
+            <div class="slider-caption">Sosyal Aktiviteler</div>
+        </div>
+
+        <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <div class="slider-dots">
+    <span class="dot" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+</div>
+</section>
+
+    <section id="hizmetler" class="section">
+    <div class="container">
+        <h2>Hizmetlerimiz</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-user-doctor"></i></div>
+                <h3>7/24 Sağlık</h3>
+                <p>Uzman doktor ve hemşire kadromuzla kesintisiz sağlık takibi.</p>
+            </div>
+            
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-palette"></i></div>
+                <h3>Sosyal Yaşam</h3>
+                <p>Hobi atölyeleri, gezi programları ve kültürel etkinlikler.</p>
+            </div>
+            
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-utensils"></i></div>
+                <h3>Özel Beslenme</h3>
+                <p>Diyetisyen kontrolünde hazırlanan sağlıklı ve taze öğünler.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="calisanlar" class="section bg-light">
+    <div class="container">
+        <h2>Uzman Kadromuz</h2>
+        
+        <div class="staff-slider-wrapper">
+            <button class="staff-nav-btn prev" onclick="moveStaff(-1)">&#10094;</button>
+            
+            <div class="staff-slider-container">
+                <div class="staff-track" id="staffTrack">
+                    <div class="staff-card">
+                        <div class="staff-img-container">
+                            <img src="https://i.pravatar.cc/150?u=1" alt="Dr. Selim Ak" class="staff-img">
+                        </div>
+                        <h4>Dr. Selim Ak</h4>
+                        <p class="staff-title">Geriatri Uzmanı</p>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-img-container">
+                            <img src="https://i.pravatar.cc/150?u=2" alt="Ayşe Yılmaz" class="staff-img">
+                        </div>
+                        <h4>Ayşe Yılmaz</h4>
+                        <p class="staff-title">Başhemşire</p>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-img-container">
+                            <img src="https://i.pravatar.cc/150?u=3" alt="Caner Öz" class="staff-img">
+                        </div>
+                        <h4>Caner Öz</h4>
+                        <p class="staff-title">Fizyoterapist</p>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-img-container">
+                            <img src="https://i.pravatar.cc/150?u=4" alt="Merve Can" class="staff-img">
+                        </div>
+                        <h4>Merve Can</h4>
+                        <p class="staff-title">Diyetisyen</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="staff-nav-btn next" onclick="moveStaff(1)">&#10095;</button>
+        </div>
+    </div>
+</section>
+<section id="etkinlikler" class="section">
+    <div class="container">
+        <h2>Etkinliklerimiz</h2>
+        <p class="section-subtitle">Pamuk Yaşlı Bakımda'da her gün yeni bir heyecan, yeni bir mutluluk.</p>
+        
+        <div class="events-grid">
+            <div class="event-item">
+                <div class="event-img-container">
+                    <img src="img/e1.png" alt="Müzik Gecesi">
+                    <div class="event-overlay">
+                        <span>Canlı Müzik Gecesi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-item">
+                <div class="event-img-container">
+                    <img src="img/e2.png" style="filter: hue-rotate(45deg);" alt="Bahçe Keyfi">
+                    <div class="event-overlay">
+                        <span>Sabah Egzersizleri</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-item">
+                <div class="event-img-container">
+                    <img src="img/e3.png" style="filter: sepia(0.5);" alt="El Sanatları">
+                    <div class="event-overlay">
+                        <span>El Sanatları Atölyesi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-item">
+                <div class="event-img-container">
+                    <img src="img/e4.png" style="filter: saturate(1.5);" alt="Doğum Günü">
+                    <div class="event-overlay">
+                        <span>Doğum Günü Kutlamaları</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="hakkimizda" class="section">
+        <div class="container about-box">
+            <h2>Hakkımızda</h2>
+            <p>Gümüş Çınar olarak, tecrübemizi sevgiyle birleştiriyoruz. Amacımız, yaşlılarımıza sadece bir barınma alanı değil, kendilerini değerli hissedecekleri bir yuva sunmaktır.</p>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-item">
+                <h3>İletişim</h3>
+                <p>Telefon: 0212 555 00 00</p>
+                <p>E-posta: bilgi@gumuscinar.com</p>
+            </div>
+            <div class="footer-item">
+                <h3>Adres</h3>
+                <p>Huzur Mahallesi, Çınar Sokak No:15, İstanbul</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Pamuk Yaşlı Bakım & Huzurevi - Tüm Hakları Saklıdır.
+        </div>
+    </footer>
+
+    <script src="js/js.js"></script>
+</body>
+</html>

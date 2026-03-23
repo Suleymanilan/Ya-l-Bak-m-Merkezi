@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Pamuk Bakım Merkezi | Huzurun Adresi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/css2.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo margin-left:200px">Pamuk Yaşlı Bakım Merkezleri</div>
+        <ul class="nav-links">
+                  <li><a href="HomePage.html">Ana Sayfa</a></li>
+            <li><a href="Services.html">Hizmetler</a></li>
+            <li><a href="Our Team.html">Ekibimiz</a></li>
+            <li><a href="About.html">Hakkımızda</a></li>
+            <li><a href="Activity.html">Etkinliklerimiz</a></li>
+            <li><a href="Contact.html">İletişim</a></li>
+ <li class="big-icon">
+    <i class="fas fa-phone"></i> +90 569874123
+</li>
+
+        </ul>
+    </nav>
+
+
+
+
+
+
+    <section class="ps-section">
+        <div class="ps-container">
+            <div class="ps-header">
+                <h2>Uzman Ekibimiz</h2>
+                <p>Tecrübeli kadromuzla yanınızdayız.</p>
+            </div>
+
+            <div class="ps-nav">
+                <div class="ps-arrow" onclick="movePS(-1)">&#10094;</div>
+                <div class="ps-arrow" onclick="movePS(1)">&#10095;</div>
+            </div>
+
+            <div class="ps-viewport">
+                <div class="ps-track" id="psTrack">
+                    <div class="ps-card">
+                        <div class="ps-img-wrapper"><img src="https://i.pravatar.cc/500?u=1"></div>
+                        <div class="ps-content">
+                            <span class="ps-role">Geriatri Uzmanı</span>
+                            <h3>Deniz Sahin</h3>
+                              <span class="ps-role">İTÜ tıp fakultesi iç hastalıklarından mezun 20yıllık Uzman Doktor</span>
+                            <button class="ps-bio-btn" onclick="openPSBio('https://i.pravatar.cc/500?u=1', 'Dr. Selim Ak', 'Hacettepe Üniversitesi Tıp Fakültesi mezunudur. 15 yılı aşkın süredir yaşlı sağlığı ve kronik hastalık takibi üzerine uzmanlık yapmaktadır.')">Özgeçmişi Gör</button>
+                        </div>
+                    </div>
+                    <div class="ps-card">
+                        <div class="ps-img-wrapper"><img src="https://i.pravatar.cc/500?u=2"></div>
+                        <div class="ps-content">
+                            <span class="ps-role">Başhemşire</span>
+                            <h3>Rüzgar şahin</h3>
+                            <span class="ps-role">Hacete tıp fakultesi sağlık bilimleri mezunu 15 yıllık deneyim ve tecrube sahibş işnde uzman ve yetkin</span>
+                            <button class="ps-bio-btn" onclick="openPSBio('https://i.pravatar.cc/500?u=2', 'Ayşe Yılmaz', 'Geriatri hemşireliği alanında master derecesine sahiptir. Şefkatli bakım ve organizasyon yönetiminde liderdir.')">Özgeçmişi Gör</button>
+                        </div>
+                    </div>
+                    <div class="ps-card">
+                        <div class="ps-img-wrapper"><img src="https://i.pravatar.cc/500?u=3"></div>
+                        <div class="ps-content">
+                            <span class="ps-role">Fizyoterapist</span>
+                            <h3>Elis Ada yılmaz</h3>
+                            <button class="ps-bio-btn" onclick="openPSBio('https://i.pravatar.cc/500?u=3', 'Caner Öz', 'Hareket rehabilitasyonu ve manuel terapi uzmanıdır. Sakinlerimizin fiziksel gücünü korumak için çalışır.')">Özgeçmişi Gör</button>
+                        </div>
+                    </div>
+                     <div class="ps-card">
+                        <div class="ps-img-wrapper"><img src="https://i.pravatar.cc/500?u=8"></div>
+                        <div class="ps-content">
+                            <span class="ps-role">Diyetisyen</span>
+                            <h3>Göktürk Erkin</h3>
+                            <button class="ps-bio-btn" onclick="openPSBio('https://i.pravatar.cc/500?u=3', 'Caner Öz', 'Hareket rehabilitasyonu ve manuel terapi uzmanıdır. Sakinlerimizin fiziksel gücünü korumak için çalışır.')">Özgeçmişi Gör</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="ps-modal">
+        <div class="ps-modal-inner">
+            <span style="position:absolute; right:25px; top:20px; cursor:pointer; font-size:30px; color:#999;" onclick="closePSBio()">&times;</span>
+            <img id="ps-m-img" class="ps-modal-img" src="">
+            <h3 id="ps-m-name" style="color:var(--primary-green); font-size:1.8rem;"></h3>
+            <hr style="border:0; height:1px; background:#eee; margin:20px 0;">
+            <p id="ps-m-text" style="line-height:1.8; color:#555; text-align:justify;"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+   
+</script>
+
+<div id="bioModal" class="custom-modal">
+    <div class="modal-box">
+        <span class="close-btn" onclick="window.closeBio()">&times;</span>
+        <div class="modal-flex">
+            <div class="modal-left-column">
+                <div class="modal-img">
+                    <img id="modalImg" src="" alt="">
+                </div>
+                <h3 id="modalName"></h3>
+                <h5 id="modalTitle"></h5>
+            </div>
+            <div class="modal-text">
+                <h3>Özgeçmiş</h3>
+                <hr>
+                <p id="modalBio"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+   <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-item">
+                <h3>İletişim</h3>
+                <p>Telefon: 0212 555 00 00</p>
+                <p>E-posta: bilgi@gumuscinar.com</p>
+            </div>
+            <div class="footer-item">
+                <h3>Adres</h3>
+                <p>Huzur Mahallesi, Çınar Sokak No:15, İstanbul</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Pamuk Yaşlı Bakım & Huzurevi - Tüm Hakları Saklıdır.
+        </div>
+    </footer>
+
+      <script src="js/js.js"></script>
+         <script src="js/js2.js"></script>
+</body>
+</html>

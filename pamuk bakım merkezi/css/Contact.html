@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Pamuk Bakım Merkezi</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        /* İletişim Formu Stilleri */
+        .contact-form {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: inherit;
+        }
+
+        /* Harita Alanı */
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .contact-info-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .info-card {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            border-bottom: 4px solid var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .info-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid, .contact-info-cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">Pamuk Bakım Merkezi</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hizmetler.html">Hizmetler</a></li>
+            <li><a href="index2.html">Ekibimiz</a></li>
+            <li><a href="iletisim.html" style="color: var(--primary-color);">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Bize Ulaşın</h2>
+            
+            <div class="contact-info-cards">
+                <div class="info-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3>Telefon</h3>
+                    <p>0212 555 00 00</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>E-Posta</h3>
+                    <p>bilgi@pamukbakim.com</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Adres</h3>
+                    <p>Huzur Mah. Çınar Sok. No:15, İstanbul</p>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3>Mesaj Gönderin</h3>
+                    <br>
+                    <form action="#">
+                        <div class="form-group">
+                            <label>Adınız Soyadınız</label>
+                            <input type="text" placeholder="Örn: Ahmet Yılmaz" required>
+                        </div>
+                        <div class="form-group">
+                            <label>E-Posta Adresiniz</label>
+                            <input type="email" placeholder="ornek@mail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Konu</label>
+                            <input type="text" placeholder="Bilgi Alma, Kayıt vb.">
+                        </div>
+                        <div class="form-group">
+                            <label>Mesajınız</label>
+                            <textarea rows="5" placeholder="Size nasıl yardımcı olabiliriz?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; background: var(--primary-color); color: white;">Gönder</button>
+                    </form>
+                </div>
+
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.44754593856!2d28.9966!3d41.1089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDA2JzMyLjAiTiAyOMKwNTknNDcuOCJF!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            &copy; 2026 Pamuk Yaşlı Bakım - Size Bir Telefon Kadar Yakınız.
+        </div>
+    </footer>
+
+    <script src="js/js.js"></script>
+</body>
+</html>
